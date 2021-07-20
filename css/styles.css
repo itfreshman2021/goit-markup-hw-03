@@ -17,6 +17,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -80,8 +82,6 @@ body {
 
 .list {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* site-nav */
@@ -90,8 +90,8 @@ body {
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
+.site-nav .item:not(:first-child) {
+  margin-left: 50px;
 }
 
 .site-nav .link {
@@ -144,12 +144,12 @@ body {
 
 /* hero */
 
-.section.hero {
+.hero {
   background-color: #2f303a;
-  
+  padding: 200px 0;
 }
 
-.container.hero { 
+.container.hero {
   text-align: center;
 }
 .hero-title {
@@ -160,15 +160,12 @@ body {
   font-size: 44px;
   line-height: 1.36;
 
-  
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   width: 696px;
-  margin-top: 200px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   margin-left: 252px;
-
 }
 
 .button.hero {
@@ -181,7 +178,7 @@ body {
 
   display: flex;
   align-items: center;
-  
+
   letter-spacing: 0.06em;
 
   min-width: 200px;
@@ -190,8 +187,6 @@ body {
   padding: 10px 32px;
   margin-left: 500px;
   margin-top: 30px;
-  
-  
 }
 
 .button {
@@ -223,6 +218,9 @@ body {
 
 /* section advantage */
 
+.section.advantage {
+  padding-bottom: 0px;
+}
 .advantage-list {
   display: flex;
 }
@@ -247,7 +245,7 @@ body {
 }
 .advantage-subtitle {
   color: var(--title-text-color);
-
+  margin-bottom: 10px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
@@ -262,10 +260,10 @@ body {
   display: flex;
 }
 
-.work-title { 
+.work-title {
   margin-bottom: 50px;
 }
-.work-list .item { 
+.work-list .item {
   width: 370px;
 }
 .work-list .item + .item {
@@ -295,11 +293,16 @@ body {
 .team-title {
   margin-bottom: 50px;
 }
+
+.card-wrapper {
+  padding: 30px 0;
+}
 .team-list .item {
   width: 270px;
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
   background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-list .item + .item {
   margin-left: 30px;
@@ -308,7 +311,6 @@ body {
 .card-title {
   color: var(--title-text-color);
 
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -346,13 +348,16 @@ body {
   line-height: 1.19;
 }
 
+address {
+  font-style: normal;
+}
 .map {
   display: block;
   margin-top: 20px;
   color: var(--white-color);
 
   text-decoration: none;
-  font-style: normal;
+
   line-height: 1.71;
 }
 .map:hover,
@@ -366,7 +371,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 
   text-decoration: none;
-  font-style: normal;
+
   line-height: 1.71;
 }
 
@@ -375,12 +380,7 @@ body {
   color: var(--accent-color);
 }
 
-
-
-
 /* Сторінка Портфолио */
-
-
 
 .button-list {
   display: flex;
@@ -392,12 +392,11 @@ body {
   width: 73px;
 }
 
-
 .button-list .item + .item {
-  margin-left: 8px;}
+  margin-left: 8px;
+}
 
-.button.portfolio { 
- 
+.button.portfolio {
   border: 0px;
   border-radius: 4px;
   padding: 6px 22px;
@@ -410,24 +409,24 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-
 }
+
 
 .button.portfolio:hover,
 .button.portfolio:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 
 /*  container for flex */
 
-.examples-list { 
+.examples-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-
 }
 
 .examples-list .item {
@@ -436,6 +435,10 @@ body {
   flex-basis: calc((100% - 90px) / 3);
 }
 
+.project-link { 
+  display: block;
+  text-decoration: none;
+}
 
 /* прибираємо зазор 4px в img */
 .project-image {
@@ -443,19 +446,16 @@ body {
 }
 
 .project-content {
-
-  border-right: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   padding-left: 23px;
   padding-right: 23px;
   padding-top: 20px;
   padding-bottom: 20px;
-
 }
 
 .project-title {
-
   margin-top: 0px;
   margin-bottom: 4px;
 
@@ -468,8 +468,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.project-field { 
-
+.project-field {
   margin: 0px;
 
   color: var(--primary-text-color);
